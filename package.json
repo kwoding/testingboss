@@ -1,0 +1,69 @@
+{
+  "name": "testingboss",
+  "private": false,
+  "description": "Testing like a boss",
+  "version": "0.1.0",
+  "author": "Kwo Ding",
+  "bugs": {
+    "url": "https://github.com/kwoding/testingboss/issues"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
+    "gatsby-remark-copy-linked-files": "^6.5.0",
+    "gatsby-remark-images": "^7.5.0",
+    "gatsby-remark-prismjs": "^7.5.0",
+    "gatsby-remark-responsive-iframe": "^6.5.0",
+    "gatsby-remark-smartypants": "^6.5.0",
+    "gatsby-source-filesystem": "^5.5.0",
+    "gatsby-transformer-remark": "^6.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "lodash": "^4.17.21",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.3",
+    "typescript": "^4.9.5"
+  },
+  "homepage": "https://github.com/kwoding/testingboss#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwoding/testingboss.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public"
+  }
+}

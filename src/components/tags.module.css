@@ -1,0 +1,39 @@
+.tags {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #ff5e1a;
+    margin-top: 3em;
+}
+
+.tags ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 !important;
+    margin: 0 0 0 1em !important;
+}
+
+.tags ul li {
+    display: inline-block;
+    margin: 0 1em 0 0 !important;
+    padding: 0 !important;
+}
+
+.tags ul li a:link,
+.tags ul li a:visited {
+    text-decoration: none;
+    border-bottom: none;
+    padding: 0.15em 0.5em !important;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+}
+
+.tags ul li a:active,
+.tags ul li a:hover {
+    color: #FFF;
+    background-color: #ff5e1a;
+    text-decoration: none;
+    border-bottom: none;
+    padding: 0.15em 0.5em !important;
+    border: 1px solid #ff5e1a;
+    border-radius: 4px;
+}

@@ -1,0 +1,31 @@
+.pager {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.pager ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pager li {
+    display: inline-block;
+    margin: 0 0.75em 0 0;
+    padding: 0;
+}
+
+.pager li.item a {
+    color: #ff5e1a;
+    text-decoration: none;
+}
+
+.pager li.selected a {
+    color: #ff5e1a;
+    text-decoration: none;
+    padding: 0.25em 0.75em;
+    border-radius: 4px;
+    border: solid 1px #ff5e1a;
+}

@@ -1,0 +1,73 @@
+.site-header {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.site-header nav {
+  background: #ff5e1a;
+  padding: 0 1em;
+}
+
+.site-header a:link,
+.site-header a:visited {
+  /* color: #fff; */
+  color: #fff4e9;
+  text-decoration: none;
+}
+
+.site-header a:active,
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .logo {
+  font-size: 2em;
+  padding: 0.5em 0.5em 0.5em 0em;
+  flex: 1
+}
+
+.site-header .title {
+  display: none;
+}
+
+.site-header .logo img {
+  vertical-align: middle;
+}
+
+.site-header .item {
+  padding: 1em;
+}
+
+.site-header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.site-header .menu li a {
+  display: block;
+  padding: 0.25em 0.25em;
+}
+
+.site-header .item {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: auto;
+}
+
+@media only screen and (min-width:769px) {
+  .site-header .title {
+    display: inline-block;
+  }
+}
