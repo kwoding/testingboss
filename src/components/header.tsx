@@ -25,7 +25,7 @@ function Header() {
       <nav>
         <ul className={styles.menu}>
           <li className={styles.logo}>
-            <a href="/blog">
+            <a href="/">
               <img src={logo} alt={siteTitle} title={siteTitle} />
             </a>
           </li>

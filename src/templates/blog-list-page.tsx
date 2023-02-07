@@ -20,10 +20,10 @@ function BlogIndex({ data, location, pageContext }) {
         title={siteTitle}
         description={siteDescription}
         image={siteUrl + shareImage}
-        url={`${siteUrl}/blog/`}
+        url={`${siteUrl}/`}
       />
       <BlogList posts={posts} />
-      <Pagination currentPage={currentPage} numPages={numPages} path="/blog/" />
+      <Pagination currentPage={currentPage} numPages={numPages} path="/" />
     </Layout>
   );
 }

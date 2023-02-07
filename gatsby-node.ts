@@ -88,15 +88,6 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
-  const { createRedirect } = actions;
-
-  createRedirect({
-    fromPath: '/',
-    toPath: '/blog',
-    redirectInBrowser: true,
-    isPermanent: true,
-  });
-
   const { numPostsPerPage } = result.data.site.siteMetadata;
   const posts = result.data.postsRemark.edges;
 
@@ -113,7 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? '/blog' : `/blog/${i + 1}`,
+        path: i === 0 ? '/' : `/${i + 1}`,
         component: postListTemplate,
         context: {
           limit: numPostsPerPage,
