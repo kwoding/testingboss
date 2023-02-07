@@ -23,11 +23,9 @@ function NotFoundPage({ data, location }) {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">
-            Nope, sorry, it appears that page does not exist
-          </h1>
-        </header>
+        <section>
+          Nope, sorry, it appears that page does not exist
+        </section>
       </article>
     </Layout>
   );
