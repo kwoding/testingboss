@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import { getSrc } from 'gatsby-plugin-image';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Share from '../components/share';
@@ -19,10 +20,7 @@ function BlogPostTemplate({ data, location }) {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={
-          siteUrl
-          + post.frontmatter.thumbnail.childImageSharp.gatsbyImageData.src
-        }
+        image={siteUrl + getSrc(post.frontmatter.thumbnail)}
         url={`${siteUrl}/blog${post.fields.slug}`}
       />
       <article
@@ -78,7 +76,7 @@ export const pageQuery = graphql`
         tags
         thumbnail {
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 1080, height: 1080)
+            gatsbyImageData(layout: FIXED, width: 200)
           }
         }
       }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import { getSrc } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
@@ -16,10 +17,7 @@ function ContentPageTemplate({ data, location }) {
       <Seo
         title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
-        image={
-          siteUrl
-          + page.frontmatter.thumbnail.childImageSharp.gatsbyImageData.src
-        }
+        image={siteUrl + getSrc(page.frontmatter.thumbnail)}
         url={siteUrl + page.fields.slug}
       />
       <article
@@ -62,7 +60,7 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 308, height: 200)
+            gatsbyImageData(layout: FIXED, width: 200)
           }
         }
       }
