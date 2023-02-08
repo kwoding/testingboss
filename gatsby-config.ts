@@ -6,7 +6,7 @@ module.exports = {
       summary: 'Test Automation Consultant',
     },
     description: 'Testing like a boss',
-    siteUrl: 'https://www.testingboss.com',
+    siteUrl: 'https://testingboss.com',
     social: {
       twitter: 'kwo_ding',
       github: 'kwoding',

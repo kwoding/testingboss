@@ -60,7 +60,7 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            gatsbyImageData(layout: FIXED, width: 200)
+            gatsbyImageData(layout: FIXED, width: 500)
           }
         }
       }
