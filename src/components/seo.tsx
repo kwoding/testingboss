@@ -37,7 +37,6 @@ function Seo({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={[{ rel: 'canonical', href: url }]}
       meta={[
         {
