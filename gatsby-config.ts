@@ -8,7 +8,7 @@ module.exports = {
     description: 'Testing like a boss',
     siteUrl: 'https://testingboss.com',
     social: {
-      twitter: 'kwo_ding',
+      twitter: '@kwo_ding',
       github: 'kwoding',
       linkedin: 'kwoding',
     },
@@ -67,6 +67,7 @@ module.exports = {
         output: '/sitemap.xml',
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-google-fonts',
