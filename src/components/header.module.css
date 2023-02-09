@@ -35,6 +35,11 @@
   flex: 1
 }
 
+.site-header .logo img {
+  width: 260px;
+  height: 53px;
+}
+
 .site-header .title {
   display: none;
 }
