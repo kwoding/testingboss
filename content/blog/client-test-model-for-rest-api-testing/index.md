@@ -87,7 +87,7 @@ Note: this example is simplified, more configuration can be added, e.g. for (de)
 Now, create a `ContactClient` that does the actual http requests.
 
 ```java
-public class ContactClient extends RestClient {
+public class ContactClient extends BaseClient {
 
     private static final String CONTACTS = "/contacts";
 
@@ -131,4 +131,4 @@ void shouldCreateContact() {
 
 ## Conclusion
 
-The separation of concerns is a great coding principle which, just like any other good coding principles, should be applied to test code. When implementing REST API tests, a logical separation would be that the test should only contain the steps/actions and the assertions. The part to perform the actual http requests should be abstracted into a so-called client. In this way, the tests are concise and the client(s) are easily extendible and reusable in other tests.
+The separation of concerns is a great coding principle which, just like any other good coding principles, should be applied to test code. When implementing REST API tests, a logical separation would be that the test only contains the steps/actions and assertions. The part to perform the actual http requests can be abstracted into a so-called client. In this way, the tests are concise and the client(s) are easily extendible and reusable in other tests.

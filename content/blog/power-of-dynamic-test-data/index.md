@@ -103,4 +103,4 @@ This way this bug was actually caught in practice.
 
 ## Conclusion
 
-Automated tests are great, but when using fixed test data over and over again, the test is obviously reproducable and consistent. However, if you just put random valid data as part of the test, the test is still valid but also increases in value. This is because using valid random data could catch unexpected behavior.
+Automated tests are great and when using fixed test data over and over again, the test is obviously reproducable and consistent. However, if you use random valid data as part of the test, the test increases in value and is still valid. This is because using valid random data could catch unexpected behavior.
