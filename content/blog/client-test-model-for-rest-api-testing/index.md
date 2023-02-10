@@ -84,7 +84,7 @@ public abstract class BaseClient {
 
 Note: this example is simplified, more configuration can be added, e.g. for (de)serializing objects.
 
-Now, create a `ContactClient` that does the actual http requests.
+Now, create a `ContactClient` that handles the actual http requests.
 
 ```java
 public class ContactClient extends BaseClient {
