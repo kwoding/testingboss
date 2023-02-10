@@ -6,6 +6,7 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GA_ID: ${{ secrets.GA_ID }}
 
 jobs:
   build:
