@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { getSrc } from 'gatsby-plugin-image';
-import Bio from '../components/bio';
+import AvatarBlock from '../components/avatar-block';
 import Layout from '../components/layout';
 import Share from '../components/share';
 import Tags from '../components/tags';
@@ -30,11 +30,7 @@ function BlogPostTemplate({ data, location }) {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <div className={styles.date}>
-            Published on:
-            {' '}
-            {post.frontmatter.date}
-          </div>
+          <AvatarBlock text={post.frontmatter.date} />
         </header>
 
         <section
@@ -44,9 +40,6 @@ function BlogPostTemplate({ data, location }) {
 
         <Tags tags={post.frontmatter.tags} />
         <Share url={`${siteUrl}/blog${post.fields.slug}`} />
-        <footer>
-          <Bio />
-        </footer>
       </article>
     </Layout>
   );
@@ -71,7 +64,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "D MMMM YYYY")
+        date(formatString: "D MMM YYYY")
         description
         tags
         thumbnail {

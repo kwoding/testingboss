@@ -5,7 +5,6 @@
 
 .blog-list h3 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
   color: #ff5e1a;
   margin: 1em;
 }
@@ -56,7 +55,6 @@
 .card h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2em;
-  font-weight: 700;
   line-height: 1.25em;
   margin: 1em 0 1em 0;
 }
@@ -64,12 +62,10 @@
 .card p {
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
-  font-weight: 300;
   line-height: 1.25em;
 }
 
 .card .cta {
-  font-weight: 700;
   color: #ff5e1a;
 }
 

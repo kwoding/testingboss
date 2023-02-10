@@ -11,12 +11,7 @@
 }
 
 .site-header a:link,
-.site-header a:visited {
-  /* color: #fff; */
-  color: #fff4e9;
-  text-decoration: none;
-}
-
+.site-header a:visited,
 .site-header a:active,
 .site-header a:hover {
   color: #fff;

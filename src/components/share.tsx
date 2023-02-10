@@ -7,14 +7,14 @@ function Share({ url }) {
   const encodedUrl = encodeURIComponent(url);
   return (
     <div className={styles.shareLinks}>
-      Share on:
+      Share:
       <ul>
         <li>
           <a
             href={`https://twitter.com/intent/tweet?url=${encodedUrl}`}
             target="_blank"
             rel="noreferrer"
-            aria-label="Share with Twitter"
+            aria-label="Share on Twitter"
           >
             <FontAwesomeIcon icon={faTwitter} />
           </a>

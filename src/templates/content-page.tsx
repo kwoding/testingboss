@@ -6,11 +6,11 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 import * as styles from './content-page.module.css';
+import AvatarBlock from '../components/avatar-block';
 
 function ContentPageTemplate({ data, location }) {
   const page = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
-  const { siteUrl } = data.site.siteMetadata;
+  const { siteUrl, siteTitle, author } = data.site.siteMetadata;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -28,6 +28,7 @@ function ContentPageTemplate({ data, location }) {
         <header>
           <h1 itemProp="headline">{page.frontmatter.title}</h1>
         </header>
+        <AvatarBlock text={author.summary} />
         <section
           dangerouslySetInnerHTML={{ __html: page.html }}
           itemProp="articleBody"
@@ -45,6 +46,9 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         siteUrl
+        author {
+          summary
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

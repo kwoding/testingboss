@@ -8,20 +8,20 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import * as styles from './avatar-block.module.css';
 
-function Bio() {
+function AvatarBlock({ text }) {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 50, height: 50)
+          gatsbyImageData(layout: FIXED, width: 45, height: 45)
         }
       }
       site {
         siteMetadata {
           author {
             name
-            summary
           }
         }
       }
@@ -30,33 +30,21 @@ function Bio() {
 
   const { author } = data.site.siteMetadata;
   return (
-    <div
-      style={{
-        display: 'flex',
-        marginBottom: 0,
-      }}
-    >
+    <div className={styles.avatarBlock}>
       <GatsbyImage
         image={data.avatar.childImageSharp.gatsbyImageData}
         alt={author.name}
-        style={{
-          marginRight: 14,
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: '100%',
-        }}
+        className={styles.image}
         imgStyle={{
           borderRadius: '50%',
         }}
       />
-      <div>
-        <strong>{author.name}</strong>
-        {' '}
-        -
-        {author.summary}
-      </div>
+      <ul>
+        <li className={styles.author}>{author.name}</li>
+        <li className={styles.text}>{text}</li>
+      </ul>
     </div>
   );
 }
 
-export default Bio;
+export default AvatarBlock;

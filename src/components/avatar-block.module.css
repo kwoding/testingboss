@@ -1,0 +1,36 @@
+.avatar-block {
+  display: flex;
+  margin: 1em;
+  align-items: center;
+}
+
+.avatar-block .image {
+  margin: 0 15 0 0;
+  min-width: 45;
+  border-radius: 100%;
+  display: block;
+}
+
+.avatar-block ul {
+  margin: 0;
+  padding: 0;
+}
+
+.avatar-block li {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: block;
+}
+
+.avatar-block li.author {
+  margin: 0.8em 0 0 0;
+  font-size: 0.9em;
+  color: #000;
+}
+
+.avatar-block li.text {
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  color: #999;
+}
