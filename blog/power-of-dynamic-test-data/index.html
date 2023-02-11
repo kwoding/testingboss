@@ -57,7 +57,7 @@
 <p>So far so good, right? Well, you can argue about this design, but nevertheless, this is a real world example I have seen in practice.</p>
 <p>A test could be as easy as this:</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
-<span class="token keyword">void</span> <span class="token function">shouldValidateIbanNumberInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">void</span> <span class="token function">ibanInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assertThat</span><span class="token punctuation">(</span><span class="token function">isIbanInEnabledCountry</span><span class="token punctuation">(</span><span class="token string">"NL69RABO1319778291"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isTrue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>Now, we are expanding the feature with a couple more countries:</p>
@@ -75,7 +75,7 @@
   <span class="token punctuation">-</span> PT</code></pre></div>
 <p>In this case the test still passes, no worries. Testing every single country is just overkill. The mechanism is quite straightforward, right? Well, if you would test with a Norwegian IBAN number the test would fail:</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
-<span class="token keyword">void</span> <span class="token function">shouldValidateIbanInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">void</span> <span class="token function">ibanInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assertThat</span><span class="token punctuation">(</span><span class="token function">isIbanInEnabledCountry</span><span class="token punctuation">(</span><span class="token string">"NO9386011117947"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isTrue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>Why? Maybe the YAML gurus reading this, already know the problem. Let me explain. The value <code class="language-text">NO</code> in the YAML file evaluates to <code class="language-text">false</code>. This means that the String list <code class="language-text">enabledCountryCodes</code> contains the value <code class="language-text">false</code> instead of <code class="language-text">NO</code>. It is easy to fix by putting the <code class="language-text">NO</code> between quotes of course.</p>
@@ -86,7 +86,7 @@
 <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">Random</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@Test</span>
-<span class="token keyword">void</span> <span class="token function">shouldValidateIbanNumberInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">void</span> <span class="token function">ibanInEnabledCountry</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token class-name">String</span> iban <span class="token operator">=</span> faker<span class="token punctuation">.</span>finance<span class="token punctuation">.</span><span class="token function">iban</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name">String</span> enabledCountryCode <span class="token operator">=</span> enabledCountryCodes<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span>enabledCountryCodes<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
