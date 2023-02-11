@@ -47,7 +47,7 @@ A test could be as easy as this:
 
 ```java
 @Test
-void shouldValidateIbanNumberInEnabledCountry() {
+void ibanInEnabledCountry() {
     assertThat(isIbanInEnabledCountry("NL69RABO1319778291")).isTrue();
 }
 ```
@@ -73,7 +73,7 @@ In this case the test still passes, no worries. Testing every single country is 
 
 ```java
 @Test
-void shouldValidateIbanInEnabledCountry() {
+void ibanInEnabledCountry() {
     assertThat(isIbanInEnabledCountry("NO9386011117947")).isTrue();
 }
 ```
@@ -90,7 +90,7 @@ private final Faker faker = Faker.newInstance();
 private final Random random = new Random();
 
 @Test
-void shouldValidateIbanNumberInEnabledCountry() {
+void ibanInEnabledCountry() {
     String iban = faker.finance.iban();
     String enabledCountryCode = enabledCountryCodes.get(random.nextInt(enabledCountryCodes.size()))
 
