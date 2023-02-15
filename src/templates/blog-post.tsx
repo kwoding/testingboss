@@ -12,16 +12,16 @@ import * as styles from './blog-post.module.css';
 
 function BlogPostTemplate({ data, location }) {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
-  const { siteUrl } = data.site.siteMetadata;
+  const { title, keywords, siteUrl } = data.site.siteMetadata;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        keywords={`${keywords},${post.frontmatter.tags.toString()}`}
         image={siteUrl + getSrc(post.frontmatter.thumbnail)}
-        url={`${siteUrl}/blog${post.fields.slug}`}
+        url={`${siteUrl} /blog${post.fields.slug}`}
       />
       <article
         className={styles.blogPost}
@@ -53,6 +53,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         siteUrl
+        keywords
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

@@ -10,13 +10,14 @@ import AvatarBlock from '../components/avatar-block';
 
 function ContentPageTemplate({ data, location }) {
   const page = data.markdownRemark;
-  const { siteUrl, siteTitle, author } = data.site.siteMetadata;
+  const { siteUrl, siteTitle, keywords, author } = data.site.siteMetadata;
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
+        keywords={keywords}
         image={siteUrl + getSrc(page.frontmatter.thumbnail)}
         url={siteUrl + page.fields.slug}
       />
@@ -46,6 +47,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         siteUrl
+        keywords
         author {
           summary
         }

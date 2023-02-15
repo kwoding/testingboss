@@ -7,19 +7,18 @@ import * as styles from './tag-list.module.css';
 import BlogList from '../components/blog-list';
 
 function TagList({ data, location, pageContext }) {
-  const siteTitle = data.site.siteMetadata.title;
-  const siteDescription = data.site.siteMetadata.description;
-  const { siteUrl } = data.site.siteMetadata;
+  const { title, description, keywords, siteUrl } = data.site.siteMetadata;
 
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <Seo
-        title={siteTitle}
-        description={siteDescription}
+        title={title}
+        description={description}
+        keywords={keywords}
         image={siteUrl + shareImage}
         url={`${siteUrl}/tag/${tag}`}
       />
@@ -48,6 +47,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        keywords
         siteUrl
       }
     }

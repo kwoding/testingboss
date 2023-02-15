@@ -7,6 +7,7 @@ module.exports = {
     },
     description: 'Testing like a boss',
     siteUrl: 'https://testingboss.com',
+    keywords: 'testingboss, testing, boss, test, automation, software, development, coding',
     social: {
       twitter: '@kwo_ding',
       github: 'kwoding',

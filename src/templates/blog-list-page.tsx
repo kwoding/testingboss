@@ -7,18 +7,17 @@ import shareImage from '../../content/assets/default-content-image.jpg';
 import BlogList from '../components/blog-list';
 
 function BlogIndex({ data, location, pageContext }) {
-  const siteTitle = data.site.siteMetadata.title;
-  const siteDescription = data.site.siteMetadata.description;
-  const { siteUrl } = data.site.siteMetadata;
+  const { title, description, keywords, siteUrl } = data.site.siteMetadata;
   const posts = data.allMarkdownRemark.edges;
 
   const { currentPage, numPages } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <Seo
-        title={siteTitle}
-        description={siteDescription}
+        title={title}
+        description={description}
+        keywords={keywords}
         image={siteUrl + shareImage}
         url={`${siteUrl}/`}
       />
@@ -36,6 +35,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        keywords
         siteUrl
       }
     }

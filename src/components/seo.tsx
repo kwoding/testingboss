@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function Seo({
-  description, lang, meta, title, image, url,
+  description, keywords, lang, meta, title, image, url,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -20,6 +20,7 @@ function Seo({
           siteMetadata {
             title
             description
+            keywords
             social {
               twitter
             }
@@ -42,6 +43,10 @@ function Seo({
         {
           name: 'description',
           content: metaDescription,
+        },
+        {
+          name: 'keywords',
+          content: keywords,
         },
         {
           property: 'og:url',
@@ -107,6 +112,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  keywords: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
