@@ -1,6 +1,6 @@
 ---
 title: Mobile Test Pyramid
-date: "2017-07-15T20:03:06.981Z"
+date: "2017-07-15"
 description: Utilize browsers, simulators/emulators and real devices for a mobile test strategy.
 thumbnail: "./mobile-test-pyramid.png"
 tags: ["mobile", "strategy"]

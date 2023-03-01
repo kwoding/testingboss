@@ -10,7 +10,9 @@ import AvatarBlock from '../components/avatar-block';
 
 function ContentPageTemplate({ data, location }) {
   const page = data.markdownRemark;
-  const { siteUrl, siteTitle, keywords, author } = data.site.siteMetadata;
+  const {
+    siteUrl, siteTitle, keywords, author,
+  } = data.site.siteMetadata;
 
   return (
     <Layout location={location} title={siteTitle}>

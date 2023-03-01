@@ -1,12 +1,12 @@
 ---
 title: The Power of Dynamic Test Data
-date: "2023-02-05T23:09:03.112Z"
+date: "2023-02-05"
 description: Use random valid test data to increase test coverage.
 thumbnail: "./test-data.jpg"
 tags: ["automation", "data", "coverage"]
 pageType: "blog"
 ---
-![Network](./test-data.jpg)
+![Typing](./test-data.jpg)
 
 In my experience I have seen many tests that run on every commit. Often these unit/integration tests use fixed data, so that the tests are reproducable and stable. That is a good thing, right? Well, not always.
 

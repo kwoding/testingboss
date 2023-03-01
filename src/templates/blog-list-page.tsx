@@ -7,7 +7,9 @@ import shareImage from '../../content/assets/default-content-image.jpg';
 import BlogList from '../components/blog-list';
 
 function BlogIndex({ data, location, pageContext }) {
-  const { title, description, keywords, siteUrl } = data.site.siteMetadata;
+  const {
+    title, description, keywords, siteUrl,
+  } = data.site.siteMetadata;
   const posts = data.allMarkdownRemark.edges;
 
   const { currentPage, numPages } = pageContext;

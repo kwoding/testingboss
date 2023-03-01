@@ -1,6 +1,6 @@
 ---
 title: Client-Test Model for REST API Testing
-date: "2023-01-02T22:12:03.284Z"
+date: "2023-01-02"
 description: Use client-test model for separation of concerns for REST API testing.
 thumbnail: "./api.jpg"
 tags: ["automation", "api", "rest"]

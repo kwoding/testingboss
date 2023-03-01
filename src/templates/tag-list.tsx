@@ -7,7 +7,9 @@ import * as styles from './tag-list.module.css';
 import BlogList from '../components/blog-list';
 
 function TagList({ data, location, pageContext }) {
-  const { title, description, keywords, siteUrl } = data.site.siteMetadata;
+  const {
+    title, description, keywords, siteUrl,
+  } = data.site.siteMetadata;
 
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
