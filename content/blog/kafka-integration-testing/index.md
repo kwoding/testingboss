@@ -8,7 +8,7 @@ pageType: "blog"
 ---
 ![Data streams](./data-streams.jpg)
 
-Communication with a message broker is a common practice, used for a variety of reasons, to decouple processing from data producers, to buffer unprocessed messages, etc. One of the most popular message brokers used at the moment is [Kafka](https://kafka.apache.org/). Kafka can also used for other use cases, other than messaging, such as website activity tracking, metrics and log aggregation. In this article I will focus on integration testing with Kafka as a message broker.
+Communication with a message broker is a common practice, used for a variety of reasons, to decouple processing from data producers, to buffer unprocessed messages, etc. One of the most popular message brokers used at the moment is [Kafka](https://kafka.apache.org/). Kafka can also be used for other use cases, other than messaging, such as website activity tracking, metrics and log aggregation. In this article I will focus on integration testing with Kafka as a message broker.
 
 Let's take a typical movie catalog service as an example which produces messages to and consumes messages from Kafka topics.
 - Producing messages: when a movie is added to the catalog, it also sends a status update to a Kafka topic for other systems to consume.
