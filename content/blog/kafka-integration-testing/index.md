@@ -1,7 +1,7 @@
 ---
 title: Kafka Integration Testing with Testcontainers
 date: "2023-03-01"
-description: Use Testcontainers to test Kafka messaging
+description: Use Testcontainers to test Kafka messaging.
 thumbnail: "./data-streams.jpg"
 tags: ["automation", "testcontainers", "kafka", "integration", "async", "docker", "container"]
 pageType: "blog"
